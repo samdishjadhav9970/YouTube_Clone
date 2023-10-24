@@ -17,6 +17,7 @@ const options = {
 
   
   export const feachDataFromApi = async (url) => {
+    console.log(url);
     const {data} = await axios.get(`${BASE_URL}/${url}`, options);
     return data;
   }

@@ -1,16 +1,10 @@
-// import logo from './logo.svg';
 import "./App.css";
 import { BrowserRouter,Routes, Route,  } from "react-router-dom";
 
 import Header from './components/Header'
-// import SuggestionVideoCard from './components/SuggestionVideoCard'
 import Feed from './components/Feed'
-// import LeftNav from './components/LeftNav'
-// import LeftNavMenuItem from './components/LeftNavMenuItem'
 import SearchResult from './components/SearchResult'
-// import SearchResultVideoCard from './components/SearchResultVideoCard'
 import VideoDetails from './components/VideoDetails'
-// import VideoCard from './components/VideoCard'
 
 import { AppContext } from "./context/contextApi";
 

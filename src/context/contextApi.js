@@ -1,4 +1,3 @@
-// import React from "react";
 import { createContext, useState, useEffect } from "react";
 
 import {feachDataFromApi} from '../utils/api'
@@ -11,9 +10,9 @@ export const AppContext = (props) => {
     const [selectCategories, setSelectCategories] = useState('New')
     const [mobileMenu, setMobileMenu] = useState(false)
 
-    useEffect(()=> {
-        feachSelectedCategoryData(selectCategories)
-    },[selectCategories])
+useEffect(() => {
+    feachSelectedCategoryData(selectCategories);
+}, [selectCategories]);
 
     const feachSelectedCategoryData = (query) =>{
         setLoading(true)
