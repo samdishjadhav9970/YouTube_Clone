@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
-import {feachDataFromApi} from '../utils/api'
+import {fetchDataFromApi} from '../utils/api'
 
 export const Context = createContext();
 
@@ -11,12 +11,12 @@ export const AppContext = (props) => {
     const [mobileMenu, setMobileMenu] = useState(false)
 
 useEffect(() => {
-    feachSelectedCategoryData(selectCategories);
+    fetchSelectedCategoryData(selectCategories);
 }, [selectCategories]);
 
-    const feachSelectedCategoryData = (query) =>{
+    const fetchSelectedCategoryData = (query) =>{
         setLoading(true)
-        feachDataFromApi(`search/?q=${query}`).then(({contents}) => {
+        fetchDataFromApi(`search/?q=${query}`).then(({contents}) => {
             console.log(contents);
             setSearchResults(contents)
             setLoading(false)

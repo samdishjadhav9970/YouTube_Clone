@@ -42,9 +42,7 @@ function VideoCard({ video }) {
               <span className="flex text-[24px] font-bold leading-none text-white/[0.7] relative top-[-10px] mx-1">
                 .
               </span>
-              <span className="truncate">
-                {video?.publishedTimeText}
-              </span>
+              <span className="truncate">{video?.publishedTimeText}</span>
             </div>
           </div>
         </div>
