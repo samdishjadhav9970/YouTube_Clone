@@ -33,7 +33,6 @@ function VideoCard({ video }) {
             <span className="text-[12px] font-semibold mt-2 text-white/[0.7] flex items-center">
               {video?.author?.title}
               {video?.author?.badges[0]?.text === "Verified" && (
-                // console.log("Verified")
                 <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
               )}
             </span>

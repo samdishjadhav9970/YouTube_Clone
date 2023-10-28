@@ -35,7 +35,7 @@ function Header() {
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
-    <div className="sticky z-10 flex top-0 flex-row justify-between items-center px-4 h-14 md:px-5 bg-white dark:bg-black">
+    <div className="sticky pt-2 z-10 flex top-0 flex-row justify-between items-center px-4 h-14 md:px-5 bg-white dark:bg-black">
       {loading && <Loader />}
 
       <div className="flex h-5 items-center">
@@ -52,48 +52,45 @@ function Header() {
           </div>
         )}
 
-        <Link to="/" className="flex h-5 items-center" >
+        <Link to="/" className="flex h-5 items-center">
           <img
             src={ytLogo}
             alt="YouTube"
             className="h-full hidden dark:md:block"
           />
-          <img
-            src={ytLogoMobile}
-            alt="YouTube" 
-            className="h-full md:hidden" />
+          <img src={ytLogoMobile} alt="YouTube" className="h-full md:hidden" />
         </Link>
       </div>
-        <div className="group flex items-center">
-          <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-[#303030] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0 ">
-            <div className="w-10 justify-center items-center hidden group-focus-within:md:flex">
-              <IoIosSearch className="text-white text-xl" />
-            </div>
-            <input 
-               type="text"
-               className="bg-transparent outline-none text-white pl-5 pr-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
-               onChange={(e) => setSearchQuery(e.target.value)}
-               onKeyUp={searchQueryHandler}
-               value={searchQuery}
-               />
+      <div className="group flex items-center">
+        <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-[#303030] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0 ">
+          <div className="w-10 justify-center items-center hidden group-focus-within:md:flex">
+            <IoIosSearch className="text-white text-xl" />
           </div>
-               <button className="w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-r-3xl bg-white/[0.1]">
-                  <IoIosSearch className="text-white text-xl" />
-               </button>
+          <input
+            type="text"
+            className="bg-transparent outline-none text-white pl-5 pr-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyUp={searchQueryHandler}
+            value={searchQuery}
+          />
         </div>
-        <div className="flex items-center">
-          <div className="hidden md:flex">
-              <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
-                <RiVideoAddLine className="text-white text-xl cursor-pointer"/>
-              </div>
-              <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
-                <FiBell className="text-white text-xl cursor-pointer"/>
-              </div>
-              <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-                <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="" />
-              </div>
+        <button className="w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-r-3xl bg-white/[0.1]">
+          <IoIosSearch className="text-white text-xl" />
+        </button>
+      </div>
+      <div className="flex items-center">
+        <div className="hidden md:flex">
+          <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
+            <RiVideoAddLine className="text-white text-xl cursor-pointer" />
+          </div>
+          <div className="flex items-center justify-center ml-2 h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
+            <FiBell className="text-white text-xl cursor-pointer" />
           </div>
         </div>
+        <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
+          <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="" />
+        </div>
+      </div>
     </div>
   );
 }

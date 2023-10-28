@@ -40,15 +40,17 @@ function VideoDetails() {
   };
 
   return (
-    <div className="flex flex-row justify-center bg-black h-[calc(100%-56px)]">
+    // h-[calc(100%-56px)]
+    <div className="flex flex-row  justify-center bg-black ">
       <div className="w-full max-w-[1280px] flex flex-col lg:flex-row">
-        <div className="flex flex-col lg:w-[calc(100%-350px)] xl:w-[calc(100%-400px)] px-4 py-3 lg:py-6 overflow-y-auto ">
+        <div className="flex flex-col  lg:w-[calc(100%-350px)] xl:w-[calc(100%-400px)] px-4 py-3 lg:py-6 overflow-y-auto ">
           <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0 ">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               controls
               width="100%"
               height="100%"
+              playing = {true}
               style={{ backgroundColor: "#000000" }}
             />
           </div>
